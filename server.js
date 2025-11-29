@@ -18,7 +18,7 @@ app.get('/',(req,res) => {
 app.post('/shorturl', async(req,res) => {
     const fullurl = req.body.fullurl;
     const shortcode = shortid.generate();
-    const shorturl = `https://localhost:5000/${shortcode}`
+    const shorturl = `https://url-shortner-7k9d.onrender.com/${shortcode}`
 
     const newurl = new shorturlmoongoose ({shortcode,fullurl})
     await newurl.save();
